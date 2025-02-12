@@ -36,18 +36,22 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0;
+        var totalQuestions =6;
+	var allergy_count = 0;
         var cold_count = 0;
 
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
-		
-
+	//Increases the count for allergy//
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
+	//Increases the count for cold//
+
+	function getResult() {
+		var allergyPercent=(allergy_count/totalQuestions)*100;
         }
 
   </script>
@@ -142,6 +146,48 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 </div>
 	
+<div class="page" id="five">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<!-- Change text to Question 4-->
+		<h1>Are your symptoms seasonal or chronic?</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p> <a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> </p>
+	<p> <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a> </p>
+	</div>
+</div>	
+
+<div class="page" id="six">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<!-- Change text to Question 4-->
+		<h1>Are your symptoms seasonal or chronic?</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p> <a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> </p>
+	<p> <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a> </p>
+	</div>
+</div>
+
+<div class="page" id="results">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<!-- Change text to Question 4-->
+		<h1>Results</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+		<p>Click the button below to see your diagnosis!</p>
+	</div>
+	<div id="resultContainer" class="w3 container">
+	<button onclick="getResult();" class=w3-button w3-white w3-round w3-hover-green" ><b>Results</b></button>
+	<!-- add -->
+        <p> id="resultText"></p>
+	<button onclick="restartTest();" class="w3-button-white-w3-round-w3-hover-red" ></b>Restart Test <b/</button>
+	<!-- add-->
+	</div>
+</div>
+
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
