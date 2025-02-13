@@ -192,16 +192,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>Click the button below to see your diagnosis!</p>
 	</div>
 	<div id="resultContainer" class="w3 container">
-	<button onclick="getResult();" class=w3-button w3-white w3-round w3-hover-green" ><b>Results</b></button>
+	<!-- Added results button -->
+	<p> <a onclick="getResult();" class="w3-btn w3-grey w3-round">Results</a> </p>
 	<!-- Added restart test button-->
-        <p> id="resultText"></p>
-	<button onclick="restartTest();" class="w3-button-white-w3-round-w3-hover-red" ></b>Restart Test <b/</button>
-	<!-- -->
+	<p> <a href="#results" onclick="restartTest();" class="w3-btn w3-grey w3-round">Restart Test</a> </p>
 	</div>
 </div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
 </footer>
 
 </body>
