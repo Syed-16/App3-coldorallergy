@@ -49,16 +49,25 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
 	//Increases the count for cold//
-
+	}
+	
 	function getResult() {
 		var allergyPercent=(allergy_count/totalQuestions)*100;
-        }
-	//Calculates probability of allergy//
-	function getResult() {
 		var coldPercent=(cold_count/totalQuestions)*100;
+		//Calculates probability of allergy and cold, respectively//
+		document.getElementById("results").innerHTML = '
+			<p>resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent
+       	';
 	}
-	//Calculates probability of cold//
 
+	function restartTest() {
+		allergy_count = 0;
+		cold_count = 0;
+		document.getElementById("results").innerHTML = '
+			<p>Click the button below to see your diagnosis!</p>
+			<p> <a onclick="getResult();" class="w3-btn w3-grey w3-round">Results</a> </p>
+	';
+	}
   </script>
 
 
@@ -191,10 +200,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
 		<p>Click the button below to see your diagnosis!</p>
-	</div>
-	<div id="resultContainer" class="w3 container">
 		<!-- Added results button -->
 		<p> <a onclick="getResult();" class="w3-btn w3-grey w3-round">Results</a> </p>
+	</div>
+	<div id="resultContainer" class="w3 container">
 		<!-- Added restart test button-->
 		<p> <a href="#one" onclick="restartTest();" class="w3-btn w3-grey w3-round">Restart Test</a> </p>
 	</div>
