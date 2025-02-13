@@ -102,7 +102,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<!-- Change text to Question 1-->
-		<h1>Are your eyes watery or itchy?</h1>
+		<h1>Question 1: Are your eyes watery or itchy?</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
@@ -116,14 +116,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div class="page" id="two">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<!-- Change text to Question 2-->
-		<h1>Do you have a fever?</h1>
+		<h1>Question 2: Do you have a fever?</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
-	<!-- Change href= to "three".
-	Changed allergy button to No and cold button to Yes.-->
-        <p> <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> </p>
-	<p> <a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a> </p>
+	<!-- Change href= to "three".-->
+        <p> <a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a> </p>
+	<p> <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> </p>
 	</div>
 </div>
 	
@@ -131,14 +130,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div class="page" id="three">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<!-- Change text to Question 3-->
-		<h1>Do you have a sore throat?</h1>
+		<h1>Question 3: Do you have a sore throat?</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
-	<!-- Change href= to "four". 
-	Changed allergy button to No and cold button to Yes.-->
-        <p> <a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> </p>
-	<p> <a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a> </p>
+	<!-- Change href= to "four"-->
+        <p> <a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a> </p>
+	<p> <a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> </p>
 	</div>
 </div>
 	
@@ -146,12 +144,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div class="page" id="four">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<!-- Change text to Question 4-->
-		<h1>Are your symptoms seasonal or chronic?</h1>
+		<h1>Question 4: Are your symptoms seasonal or chronic?</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
 	<!-- Change href= to "five"-->
-        <p> <a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> </p>
+        <p> <a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black">Yes</a> </p>
 	<p> <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a> </p>
 	</div>
 </div>
@@ -160,14 +158,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div class="page" id="five">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<!-- Change text to Question 5-->
-		<h1>Do you have any body aches</h1>
+		<h1>Question 5: Do you have any body aches?</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
-	<!-- Change href= to "six".
-	Changed allergy button to No and cold button to Yes.-->
-        <p> <a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a> </p>
-	<p> <a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a> </p>
+	<!-- Change href= to "six"-->
+       	<p> <a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a> </p>
+	<p> <a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> </p>
 	</div>
 </div>	
 
@@ -175,7 +172,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div class="page" id="six">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<!-- Change text to Question 6-->
-		<h1>Do you have an itchy nose?</h1>
+		<h1>Question 6: Do you have an itchy nose?</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
@@ -196,10 +193,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	<div id="resultContainer" class="w3 container">
 	<button onclick="getResult();" class=w3-button w3-white w3-round w3-hover-green" ><b>Results</b></button>
-	<!-- add -->
+	<!-- Added restart test button-->
         <p> id="resultText"></p>
 	<button onclick="restartTest();" class="w3-button-white-w3-round-w3-hover-red" ></b>Restart Test <b/</button>
-	<!-- add-->
+	<!-- -->
 	</div>
 </div>
 
