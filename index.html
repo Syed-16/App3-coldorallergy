@@ -42,22 +42,24 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
         function allergyAdd(){
-            allergy_count = allergy_count + 1;
 	//Increases the count for allergy//
+            allergy_count = allergy_count + 1;
         }
 
         function coldAdd(){
-            cold_count = cold_count + 1;
 	//Increases the count for cold//
+            cold_count = cold_count + 1;
 	}
 	
-	function getResult() {
+	function diagnosisResult() {
+		//Calculates probability of allergy//
 		var allergyPercent=(allergy_count/totalQuestions)*100;
+		//Calculates probability of cold//
 		var coldPercent=(cold_count/totalQuestions)*100;
-		//Calculates probability of allergy and cold, respectively//
-		document.getElementById("results").innerHTML = '
-			<p>resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent
-       	';
+		//Results link back to the last page//
+		var resultText = document.getElementById("results")
+		//this code indicates the probability of a percent diagnosis for either allergy or cold to occur//
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" "<br> Probability it is a cold =" + coldPercent + "%";
 	}
 
 	function restartTest() {
@@ -65,8 +67,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		cold_count = 0;
 		document.getElementById("results").innerHTML = '
 			<p>Click the button below to see your diagnosis!</p>
-			<p> <a onclick="getResult();" class="w3-btn w3-grey w3-round">Results</a> </p>
-	';
+			<p> <a onclick="getResult();" class="w3-btn w3-grey w3-round">Results</a> </p>;
 	}
   </script>
 
@@ -197,18 +198,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!-- Change text to Results-->
 		<h1>Results</h1>
 	</div>
-	
+		<!-- this code ensures the results function is identical -->
+		<p id="results"></p>
     	<div id="content" class="w3-container">
 		<p>Click the button below to see your diagnosis!</p>
 		<!-- Added results button -->
-		<p> <a onclick="getResult();" class="w3-btn w3-grey w3-round">Results</a> </p>
-	</div>
+		<p> <a href="results" onclick="diagnosisResults();" class="w3-btn w3-black">Results</a>
+			
 	<div id="resultContainer" class="w3 container">
 		<!-- Added restart test button-->
 		<p> <a href="#one" onclick="restartTest();" class="w3-btn w3-grey w3-round">Restart Test</a> </p>
 	</div>
 </div>
-
+		
 <footer class="w3-bottom w3-container w3-flat-carrot">
 </footer>
 
