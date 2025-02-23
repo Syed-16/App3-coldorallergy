@@ -43,6 +43,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function allergyAdd(){
 	//Increases the count for allergy//
+	//Deleted the alert for allergy count//
             allergy_count = allergy_count + 1;
         }
 
@@ -51,15 +52,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
 	}
 	
-	function diagnosisResult() {
-		//Calculates probability of allergy//
+	function showResults(){
+		//Added function to display results to users//
+		var resultParagraph = document.getElementById("results");
+		//Calculates probability of allergy, probability of cold, and the total//
 		var allergyPercent=(allergy_count/totalQuestions)*100;
-		//Calculates probability of cold//
 		var coldPercent=(cold_count/totalQuestions)*100;
-		//Results link back to the last page//
-		var resultText = document.getElementById("results")
-		//this code indicates the probability of a percent diagnosis for either allergy or cold to occur//
-		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" "<br> Probability it is a cold =" + coldPercent + "%";
+		var total = cold_count + allergycount;
+		//This code indicates the probability of a percent diagnosis for either allergy or cold to occur//
+		resultParagraph.innerHTML = "Probability it is allergies =" + allergyPercent + "%" "<br> Probability it is a cold =" + coldPercent + "%";
 	}
 
 	function restartTest() {
