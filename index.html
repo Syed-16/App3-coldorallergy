@@ -62,13 +62,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		resultParagraph.innerHTML = "Probability it is allergies =" + allergyPercent + "%" "<br> Probability it is a cold =" + coldPercent + "%";
 	}
 
-	function restartTest() {
-		allergy_count = 0;
-		cold_count = 0;
-		document.getElementById("results").innerHTML = '
-			<p>Click the button below to see your diagnosis!</p>
-			<p> <a onclick="showResults();" class="w3-btn w3-grey w3-round">Results</a> </p>;
-	}
   </script>
 
 
@@ -199,8 +192,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!-- Added Question 6-->
 		<p>Do you have an itchy nose?</p>
 		<!-- Change href= to "results"-->
-		<p> <a href="results" onclick="coldAdd(); showResults()" class="w3-btn w3-black"> Yes </a> </p>
-		<p> <a href="results" onlick="allergyAdd(); showResults()" class="w3-btn w3-black"> No </a> </p>
+		<p> <a href="#results" onclick="coldAdd(); showResults()" class="w3-btn w3-black"> Yes </a> </p>
+		<p> <a href="#results" onlick="allergyAdd(); showResults()" class="w3-btn w3-black"> No </a> </p>
 	</div>
 </div>
 </div>
