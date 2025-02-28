@@ -36,7 +36,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var totalQuestions =6;
 	var allergy_count = 0;
         var cold_count = 0;
 
@@ -56,9 +55,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		//Added function to display results to users//
 		var resultParagraph = document.getElementById("results");
 		//Calculates probability of allergy, probability of cold, and the total//
-		var allergyPercent=(allergy_count/totalQuestions)*100;
-		var coldPercent=(cold_count/totalQuestions)*100;
-		var total = cold_count + allergycount;
+		var allergyPercent=((allergy_count/6)*100);
+		var coldPercent=((cold_count/6)*100);
+		var total = cold_count + allergy_count;
 		//This code indicates the probability of a percent diagnosis for either allergy or cold to occur//
 		resultParagraph.innerHTML = "Probability it is allergies =" + allergyPercent + "%" "<br> Probability it is a cold =" + coldPercent + "%";
 	}
@@ -68,7 +67,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		cold_count = 0;
 		document.getElementById("results").innerHTML = '
 			<p>Click the button below to see your diagnosis!</p>
-			<p> <a onclick="getResult();" class="w3-btn w3-grey w3-round">Results</a> </p>;
+			<p> <a onclick="showResults();" class="w3-btn w3-grey w3-round">Results</a> </p>;
 	}
   </script>
 
