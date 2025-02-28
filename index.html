@@ -55,8 +55,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		//Added function to display results to users//
 		var resultParagraph = document.getElementById("results");
 		//Calculates probability of allergy, probability of cold, and the total//
-		var allergyPercent=((allergy_count/6)*100);
-		var coldPercent=((cold_count/6)*100);
+		var allergyPercent = ((allergy_count/6) * 100);
+		var coldPercent = ((cold_count/6) * 100);
 		var total = cold_count + allergy_count;
 		//This code indicates the probability of a percent diagnosis for either allergy or cold to occur//
 		resultParagraph.innerHTML = "Probability it is allergies =" + allergyPercent + "%" "<br> Probability it is a cold =" + coldPercent + "%";
@@ -207,7 +207,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	<div id="content" class="w3-container w3-flat-carrot">
 		<!-- Added results button, this code reveals the diagnosis -->
 		<p> <a href="#results" onclick ="showResults();" class="w3-btn w3-btn w3-black"> Click for Results </a> </p>
-			<p id="results" ></p>
+		<p id="results" ></p>
 	</div>
 </div>
 		
