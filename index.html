@@ -53,14 +53,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	function showResults(){
 		//Added function to display results to users//
-		var resultText = document.getElementById("results");
+		var resultText = document.getElementById("resultsText");
 		//Calculates probability of allergy, probability of cold, and the total//
 		var allergyPercent = ((allergy_count/6) * 100);
 		var coldPercent = ((cold_count/6) * 100);
-		var total = cold_count + allergy_count;
 		//This code indicates the probability of a percent diagnosis for either allergy or cold to occur//
-		resultParagraph.innerHTML = "Probability it is allergies =" + allergyPercent + "%" "<br> Probability it is a cold =" + coldPercent + "%";
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" "<br> Probability it is a cold =" + coldPercent + "%";
 	}
+	function restartTest(){
+		allergy_count = 0;
+		cold_count = 0;
+		//Sends the user back to the start of the test//
+		window.location.href = "#";
 
   </script>
 
@@ -192,8 +196,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!-- Added Question 6-->
 		<p>Do you have an itchy nose?</p>
 		<!-- Change href= to "results"-->
-		<p> <a href="#results" onclick="coldAdd(); showResults()" class="w3-btn w3-black"> Yes </a> </p>
-		<p> <a href="#results" onlick="allergyAdd(); showResults()" class="w3-btn w3-black"> No </a> </p>
+		<p> <a href="#results" onclick="coldAdd(); showResults();" class="w3-btn w3-black"> Yes </a> </p>
+		<p> <a href="#results" onclick="allergyAdd(); showResults();" class="w3-btn w3-black"> No </a> </p>
 	</div>
 </div>
 </div>
@@ -204,11 +208,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!-- Change text to Results-->
 		<h1>Results</h1>
 	</div>
-		<!-- This part relates back to the showResults function-->
-		<p id="results"></p>
+		<!-- This part relates back to the Results function-->
     	<div id="content" class="w3-container w3-flat-carrot">
-		<!-- Added results button, this code reveals the diagnosis -->
-		<p> <a href="#results" onclick ="showResults();" class="w3-btn w3-black"> Results </a> </p>
+		<!-- Added restart test button -->
+		<p id="resultsText"></p>
+		<p> <a href="#" onclick ="restartTest();" class="w3-btn w3-black"> Restart Test </a> </p>
 	</div>
 </div>
 		
